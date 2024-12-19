@@ -2,6 +2,7 @@
 using CleanArchitectrure.Application.Dto;
 using CleanArchitectrure.Application.Interface.Persistence;
 using CleanArchitectrure.Application.UseCases.Commons.Bases;
+using CleanArchitectrure.Application.UseCases.Commons.Util;
 using MediatR;
 
 namespace CleanArchitectrure.Application.UseCases.Customers.Queries.GetAllCustomerQuery
@@ -39,7 +40,7 @@ namespace CleanArchitectrure.Application.UseCases.Customers.Queries.GetAllCustom
             try
             {
                 var customers = await _unitOfWork.QCustomers.GetAllAsync();
-
+               
                 if(customers is not null)
                 {
                     response.Data = _mapper.Map<IEnumerable<CustomerDto>>(customers);
@@ -48,8 +49,8 @@ namespace CleanArchitectrure.Application.UseCases.Customers.Queries.GetAllCustom
                 }
             }
             catch (Exception ex)
-            {
-                response.Message = ex.Message;
+            {            
+                Util<IEnumerable<CustomerDto>>.GenerateError(response, ex);
             }
 
             return response;

@@ -2,6 +2,7 @@
 using CleanArchitectrure.Application.Dto;
 using CleanArchitectrure.Application.Interface.Persistence;
 using CleanArchitectrure.Application.UseCases.Commons.Bases;
+using CleanArchitectrure.Application.UseCases.Commons.Util;
 using MediatR;
 
 namespace CleanArchitectrure.Application.UseCases.Customers.Queries.GetAllWithPaginationCustomerQuery
@@ -53,7 +54,11 @@ namespace CleanArchitectrure.Application.UseCases.Customers.Queries.GetAllWithPa
             }
             catch (Exception ex)
             {
-                response.Message = ex.Message;
+                var lstErrors = new List<BaseError>();
+                var error = new BaseError() { ErrorMessage = Convert.ToString(ex.Message) };
+                lstErrors.Add(error);
+                response.Errors = lstErrors;
+                response.Message = ex.Message;               
             }
             return response;
         }

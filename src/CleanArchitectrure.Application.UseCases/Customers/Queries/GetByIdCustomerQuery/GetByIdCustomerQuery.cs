@@ -12,6 +12,6 @@ namespace CleanArchitectrure.Application.UseCases.Customers.Queries.GetByIdCusto
         /// <summary>
         /// CustomerId
         /// </summary>
-        public string? CustomerId { get; set; }
+        public required string CustomerId { get; set; }
     }
 }

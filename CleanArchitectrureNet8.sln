@@ -11,19 +11,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{EAFA6276-2FE7-43D1-B742-52FA30AF6464}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitectrure.Infrastructure", "src\CleanArchitectrure.Infrastructure\CleanArchitectrure.Infrastructure.csproj", "{8B0D54F7-5898-4877-BD8C-5FF635D31189}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitectrure.Infrastructure", "src\CleanArchitectrure.Infrastructure\CleanArchitectrure.Infrastructure.csproj", "{8B0D54F7-5898-4877-BD8C-5FF635D31189}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitectrure.Persistence", "src\CleanArchitectrure.Persistence\CleanArchitectrure.Persistence.csproj", "{952B79AD-77E4-4AAA-A4F0-A2BE56751DEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitectrure.Persistence", "src\CleanArchitectrure.Persistence\CleanArchitectrure.Persistence.csproj", "{952B79AD-77E4-4AAA-A4F0-A2BE56751DEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitectrure.Domain", "src\CleanArchitectrure.Domain\CleanArchitectrure.Domain.csproj", "{4A936BA5-57AB-44AD-8169-E0256776E476}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitectrure.Domain", "src\CleanArchitectrure.Domain\CleanArchitectrure.Domain.csproj", "{4A936BA5-57AB-44AD-8169-E0256776E476}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitectrure.Application.Dto", "src\CleanArchitectrure.Application.Dto\CleanArchitectrure.Application.Dto.csproj", "{7F11B48D-809D-4DBB-A1C9-C6D8B49E34B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitectrure.Application.Dto", "src\CleanArchitectrure.Application.Dto\CleanArchitectrure.Application.Dto.csproj", "{7F11B48D-809D-4DBB-A1C9-C6D8B49E34B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitectrure.Application.UseCases", "src\CleanArchitectrure.Application.UseCases\CleanArchitectrure.Application.UseCases.csproj", "{26B71565-5154-4340-8DBB-23F36210197D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitectrure.Application.UseCases", "src\CleanArchitectrure.Application.UseCases\CleanArchitectrure.Application.UseCases.csproj", "{26B71565-5154-4340-8DBB-23F36210197D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitectrure.Application.Interface", "src\CleanArchitectrure.Application.Interface\CleanArchitectrure.Application.Interface.csproj", "{E0013662-7F49-460E-8A01-1FC8A829FB6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitectrure.Application.Interface", "src\CleanArchitectrure.Application.Interface\CleanArchitectrure.Application.Interface.csproj", "{E0013662-7F49-460E-8A01-1FC8A829FB6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitectrure.WebApi", "src\CleanArchitectrure.WebApi\CleanArchitectrure.WebApi.csproj", "{302BB139-613A-4890-852D-27BA1ED513EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitectrure.WebApi", "src\CleanArchitectrure.WebApi\CleanArchitectrure.WebApi.csproj", "{302BB139-613A-4890-852D-27BA1ED513EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

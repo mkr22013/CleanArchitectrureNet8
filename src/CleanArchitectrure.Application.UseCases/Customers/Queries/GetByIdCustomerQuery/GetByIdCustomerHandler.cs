@@ -2,6 +2,7 @@
 using CleanArchitectrure.Application.Dto;
 using CleanArchitectrure.Application.Interface.Persistence;
 using CleanArchitectrure.Application.UseCases.Commons.Bases;
+using CleanArchitectrure.Application.UseCases.Commons.Util;
 using MediatR;
 
 namespace CleanArchitectrure.Application.UseCases.Customers.Queries.GetByIdCustomerQuery
@@ -9,23 +10,16 @@ namespace CleanArchitectrure.Application.UseCases.Customers.Queries.GetByIdCusto
     /// <summary>
     /// GetByIdCustomerHandler
     /// </summary>
-    public class GetByIdCustomerHandler : IRequestHandler<GetByIdCustomerQuery, BaseResponse<CustomerDto>>
+    /// <remarks>
+    /// GetByIdCustomerHandler constructor
+    /// </remarks>
+    /// <param name="unitOfWork"></param>
+    /// <param name="mapper"></param>
+    /// <exception cref="ArgumentNullException"></exception>
+    public class GetByIdCustomerHandler(IUnitOfWork unitOfWork, IMapper mapper) : IRequestHandler<GetByIdCustomerQuery, BaseResponse<CustomerDto>>
     {
-
-        private readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapper;
-
-        /// <summary>
-        /// GetByIdCustomerHandler constructor
-        /// </summary>
-        /// <param name="unitOfWork"></param>
-        /// <param name="mapper"></param>
-        /// <exception cref="ArgumentNullException"></exception>
-        public GetByIdCustomerHandler(IUnitOfWork unitOfWork, IMapper mapper)
-        {
-            _unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork));
-            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
-        }
+        private readonly IUnitOfWork _unitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork));
+        private readonly IMapper _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
 
         /// <summary>
         /// Handle
@@ -48,7 +42,7 @@ namespace CleanArchitectrure.Application.UseCases.Customers.Queries.GetByIdCusto
             }
             catch (Exception ex)
             {
-                response.Message = ex.Message;
+                Util<CustomerDto>.GenerateError(response, ex);
             }
             return response;
         }
